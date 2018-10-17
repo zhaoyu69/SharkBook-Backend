@@ -3,9 +3,9 @@
 const Controller = require('egg').Controller;
 
 class UserController extends Controller {
-    async index() {
+    async register() {
         const {ctx} = this;
-        ctx.body = await ctx.service.user.findAll();
+        ctx.body = await ctx.service.user.register(ctx.request.body);
     }
 }
 
