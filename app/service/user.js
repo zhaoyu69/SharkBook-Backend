@@ -10,6 +10,12 @@ class UserService extends Service {
         obj.nickname = username;
         return parseUser.save(obj);
     }
+
+    async updateUserInfo({userId, type, value}) {
+        const parseUser = UserObj.createWithoutData(userId);
+        parseUser.set(type, value);
+        return parseUser.save(null, {useMasterKey: true});
+    }
 }
 
 module.exports = UserService;

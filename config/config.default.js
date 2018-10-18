@@ -26,6 +26,10 @@ module.exports = appInfo => {
       },
   };
 
+  // app.public
+  config.static = {
+
+  };
 
   return config;
 };

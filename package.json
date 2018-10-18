@@ -6,6 +6,8 @@
   "dependencies": {
     "egg": "^2.2.1",
     "egg-scripts": "^2.5.0",
+    "egg-static": "^2.1.1",
+    "lodash": "^4.17.11",
     "parse": "^2.1.0"
   },
   "devDependencies": {

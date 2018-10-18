@@ -16,3 +16,6 @@ $ cd SharkBook-Backend && npm i
 $ npm run dev
 $ open http://localhost:7001
 ```
+
+### Import Data
+[http://localhost:7001/import/baseTypes](http://localhost:7001/import/baseTypes)
