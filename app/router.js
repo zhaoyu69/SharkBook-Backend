@@ -13,4 +13,12 @@ module.exports = app => {
 
     // import
     router.get('/import/baseTypes', controller.import.importBaseTypes);
+
+    // type
+    router.post('/api/type/getUserTypes', controller.type.getUserTypes);
+    router.post('/api/type/getBaseTypes', controller.type.getBaseTypes);
+
+    // acount
+    router.post('/api/account/makeAccount', controller.account.makeAccount);
+    router.post('/api/account/getAccounts', controller.account.getAccounts);
 };
