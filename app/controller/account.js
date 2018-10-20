@@ -14,6 +14,12 @@ class AccountController extends Controller {
         const {ctx} = this;
         ctx.body = await ctx.service.account.getAccounts(ctx.request.body);
     }
+
+    // 删除记账
+    async removeAccount() {
+        const {ctx} = this;
+        ctx.body = await ctx.service.account.removeAccount(ctx.request.body);
+    }
 }
 
 module.exports = AccountController;

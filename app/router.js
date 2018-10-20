@@ -21,4 +21,5 @@ module.exports = app => {
     // acount
     router.post('/api/account/makeAccount', controller.account.makeAccount);
     router.post('/api/account/getAccounts', controller.account.getAccounts);
+    router.post('/api/account/removeAccount', controller.account.removeAccount);
 };

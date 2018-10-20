@@ -20,9 +20,15 @@ class AccountService extends Service {
         const innerQuery = new Parse.Query(UserTypeObj);
         innerQuery.equalTo("user", parseUser);
         const query = new Parse.Query(AccountObj);
+        query.include(["userType", "userType.type", "userType.user"]);
         query.matchesQuery("userType", innerQuery);
         return query.find();
     };
+
+    async removeAccount({accountId}) {
+        const parseAccount = AccountObj.createWithoutData(accountId);
+        return parseAccount.destroy();
+    }
 }
 
 module.exports = AccountService;
