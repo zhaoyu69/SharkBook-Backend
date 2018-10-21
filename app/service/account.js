@@ -29,6 +29,19 @@ class AccountService extends Service {
         const parseAccount = AccountObj.createWithoutData(accountId);
         return parseAccount.destroy();
     }
+
+    async updateUserType({accountId, typeId}) {
+        const parseUserType = await this.ctx.service.type.getUserTypeByTypeId(typeId);
+        const parseAccount = AccountObj.createWithoutData(accountId);
+        parseAccount.set("userType", parseUserType);
+        return parseAccount.save();
+    }
+
+    async updateAccount({accountId, type, value}) {
+        const parseAccount = AccountObj.createWithoutData(accountId);
+        parseAccount.set(type, value);
+        return parseAccount.save();
+    }
 }
 
 module.exports = AccountService;

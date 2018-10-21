@@ -20,6 +20,18 @@ class AccountController extends Controller {
         const {ctx} = this;
         ctx.body = await ctx.service.account.removeAccount(ctx.request.body);
     }
+
+    // 更新用户类别
+    async updateUserType() {
+        const {ctx} = this;
+        ctx.body = await ctx.service.account.updateUserType(ctx.request.body);
+    }
+
+    // 更新账单属性
+    async updateAccount() {
+        const {ctx} = this;
+        ctx.body = await ctx.service.account.updateAccount(ctx.request.body);
+    }
 }
 
 module.exports = AccountController;
