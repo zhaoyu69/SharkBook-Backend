@@ -11,7 +11,7 @@ class AccountService extends Service {
         parseAccount.set("userType", parseUserType);
         parseAccount.set("remarks", remarks);
         parseAccount.set("price", price);
-        parseAccount.set("time", time);
+        parseAccount.set("time", new Date(time));
         return parseAccount.save();
     };
 
