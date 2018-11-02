@@ -24,4 +24,7 @@ module.exports = app => {
     router.post('/api/account/removeAccount', controller.account.removeAccount);
     router.post('/api/account/updateUserType', controller.account.updateUserType);
     router.post('/api/account/updateAccount', controller.account.updateAccount);
+
+    // feature
+    router.get('/api/feature/getFeatures', controller.feature.getFeatures)
 };
